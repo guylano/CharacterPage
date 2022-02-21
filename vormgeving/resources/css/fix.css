@@ -1,0 +1,7 @@
+#place {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 480px;
+    background-color: white;
+    padding: 10px 20px;
+}
