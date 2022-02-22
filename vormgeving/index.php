@@ -23,23 +23,25 @@
         foreach($data as $d)
             {
         ?>
-
-            <a class="item" href="character.php">
-                <div class="left">
-                    <img class="avatar" src="resources/images/<?php print $d['avatar']; ?>">
-                </div>
-                <div class="right">
-                    <h2><?php print $d['name']; ?></h2>
-                    <div class="stats">
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fas fa-heart"></i></span> <?php print $d['health']; ?></li>
-                            <li><span class="fa-li"><i class="fas fa-fist-raised"></i></span> <?php print $d['attack']; ?></li>
-                            <li><span class="fa-li"><i class="fas fa-shield-alt"></i></span> <?php print $d['defense']; ?></li>
-                        </ul>
+            <form action="character.php" method="post">
+                <input type="hidden" name="id" <?php print('value="'.$d['id'].'"'); ?> >
+                <button class="item"  type='submit'>
+                    <div class="left">
+                        <img class="avatar" src="resources/images/<?php  print($d['avatar']); ?>">
                     </div>
-                </div>
-                <div class="detailButton"><i class="fas fa-search"></i> bekijk</div>
-            </a>
+                    <div class="right">
+                        <h2><?php print $d['name']; ?></h2>
+                        <div class="stats">
+                            <ul class="fa-ul">
+                                <li><span class="fa-li"><i class="fas fa-heart"></i></span> <?php print $d['health']; ?></li>
+                                <li><span class="fa-li"><i class="fas fa-fist-raised"></i></span> <?php print $d['attack']; ?></li>
+                                <li><span class="fa-li"><i class="fas fa-shield-alt"></i></span> <?php print $d['defense']; ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detailButton"><i class="fas fa-search"></i> bekijk</div>
+                </button>
+            </form>
         <?php
             } 
          ?>
