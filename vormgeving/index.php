@@ -7,17 +7,17 @@
     <link href="resources/css/style.css" rel="stylesheet"/>
     <link href="resources/css/fix.css" rel="stylesheet"/>
     <?php include_once 'resources/includes/dbh.inc.php' ?>
+    <?php include_once 'resources/models/CharacterModel.php' ?>
 </head>
 <body>
     <?php 
-        $object = new dbh;
-        $object->connect();
-        $data = $object->query("SELECT * FROM `characters`");
+        $data = getAllCharacters();
     ?>
 
 <header><h1>Alle <?php print(count($data)); ?> characters uit de database</h1>
 </header>
 <div id="container">
+
     <div id="place">
         <?php 
         foreach($data as $d)

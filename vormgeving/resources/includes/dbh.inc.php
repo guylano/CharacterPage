@@ -40,7 +40,8 @@ class dbh{
 
 } 
 
-
+$db = new dbh;
+$db->connect();
 
 
 
