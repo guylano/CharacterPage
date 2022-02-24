@@ -28,8 +28,8 @@
                     <li><span class="fa-li"><i class="fas fa-shield-alt"></i></span> <?php print($character['defense']); ?></li>
                 </ul>
                 <ul class="gear">
-                    <li><b>Weapon</b>: <?php print($character['weapon']); ?></li>
-                    <li><b>Armor</b>: <?php print($character['armor']); ?></li>
+                    <?php if($character['weapon']!= null){ ?><li><b>Weapon</b>: <?php print($character['weapon']); ?></li> <?php } ?>
+                    <?php if($character['armor']!= null){ ?><li><b>Armor</b>: <?php print($character['armor']); ?></li> <?php } ?>
                 </ul>
             </div>
         </div>
