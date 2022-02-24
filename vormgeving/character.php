@@ -35,7 +35,11 @@
         </div>
         <div class="right">
             <p>
-                <?php print($character['bio']); ?>
+                <?php $bio = explode("\n", $character['bio']);
+                    foreach($bio as $string){
+                        print($string.'<br>');
+                    }
+                ?>
             </p>
         </div>
         <div style="clear: both"></div>
