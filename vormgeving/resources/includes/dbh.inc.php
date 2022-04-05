@@ -18,10 +18,10 @@ class dbh{
 	}
 
 	public function connect(){
-		$this->servername = 'localhost';
-		$this->username = 'root';
-		$this->password = 'mysql';
-		$this->dbname = 'dynamische applicatie';
+		$this->servername = 'bj7rm8nfleevkxibibb0';
+		$this->username = 'uxwnkdkgjatcr3g9';
+		$this->password = 'nyMDhnNPtXofHsvX5dm5';
+		$this->dbname = 'uxwnkdkgjatcr3g9';
 		$this->charset = 'utf8mb4';
 
 
